@@ -1,9 +1,10 @@
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 body {
-  background-color: #EBE6D9; 
-	color: #21364E;
+  background-color: #ebe6d9;
+  color: #21364e;
 }
 /**
  * Enable smooth scrolling on the whole document
@@ -31,7 +32,7 @@ html {
 /* Header */
 .site-title {
   min-width: 10em;
-  float:left;
+  float: left;
 }
 
 @media (min-width: 48em) {
@@ -42,7 +43,7 @@ html {
 
 .nav-link {
   font-weight: 700;
- font-size: 1rem;
+  font-size: 1rem;
   color: rgba(33, 54, 78, 0.8) !important;
 }
 
@@ -63,10 +64,10 @@ html {
   font-weight: 600;
 }
 
-#makeithiger{
-	margin-top:-15px;
-	color:rgba(33,54,78,0.8);
-	font-style: italic;
+#makeithiger {
+  margin-top: -15px;
+  color: rgba(33, 54, 78, 0.8);
+  font-style: italic;
 }
 
 @-webkit-keyframes animateWave {
@@ -94,7 +95,7 @@ html {
   min-width: 600px;
   transform-origin: top;
   -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-          animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   background-image: url("../images/wave-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -103,10 +104,9 @@ html {
 img.avatar {
   border-radius: 30px;
 }
-.col-md-6{
-	margin-top: 70px;
+.col-md-6 {
+  margin-top: 70px;
 }
-
 
 /* portfolio computer */
 #smallcomputer {
@@ -116,12 +116,11 @@ img.avatar {
   max-width: 100%; /* Set a max-width to prevent the container from becoming too small */
   margin: 0; /* Set margin to 0 to eliminate extra margin */
   padding: 0; /* Set padding to 0 to eliminate extra padding */
-
 }
 
 .figure {
-    position: relative;
-  }
+  position: relative;
+}
 
 .figure img.Sirv.image-main,
 .figure img.Sirv.image-hover {
@@ -130,22 +129,21 @@ img.avatar {
   object-fit: contain;
 }
 
- .figure img.Sirv.image-hover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity .2s;
-	 max-width: 100%;
-  }
-  .figure:hover img.Sirv.image-hover {
-    opacity: 1;
-	  max-width: 100%;
-
-  }
+.figure img.Sirv.image-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.2s;
+  max-width: 100%;
+}
+.figure:hover img.Sirv.image-hover {
+  opacity: 1;
+  max-width: 100%;
+}
 
 /* Styles for the modified grid */
 .grid-container {
@@ -160,7 +158,6 @@ img.avatar {
   width: 90%; /* Set a relative width to ensure the grid doesn't overflow the screen */
   max-width: 600px; /* Set a maximum width for better responsiveness */
 }
-
 
 .grid-item {
   text-align: center;
@@ -178,13 +175,9 @@ img.avatar {
   font-weight: bold;
 }
 
-
-
-
-
 /* Masonary grid for portfolio */
 .grid:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -241,7 +234,7 @@ img.avatar {
 }
 
 .portfolio-item figcaption h4 {
-  color: #EBE6D9;
+  color: #ebe6d9;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
@@ -249,7 +242,7 @@ img.avatar {
 }
 
 .portfolio-item figcaption p {
-  color: #EBE6D9;
+  color: #ebe6d9;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 0;
@@ -261,7 +254,7 @@ img.avatar {
 
 /* Portolio Caption */
 #bp_container .bp-xc {
-  background: #EE3724 !important;
+  background: #ee3724 !important;
 }
 
 #bp_caption a {
@@ -274,7 +267,7 @@ footer a:not(.nav-link) {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-	background-color: #EBE6D9;
+  background-color: #ebe6d9;
 }
 
 /* Scroll Top */
@@ -286,7 +279,7 @@ footer a:not(.nav-link) {
   position: fixed;
   bottom: 20px;
   right: 20px;
-	color:#21364E;
+  color: #21364e;
 }
 
 #scrolltop .btn {
@@ -309,7 +302,7 @@ footer a:not(.nav-link) {
 }
 
 .hover-effect {
-  transition: transform .18s ease-in-out;
+  transition: transform 0.18s ease-in-out;
 }
 
 .hover-effect:hover {
@@ -354,16 +347,22 @@ footer a:not(.nav-link) {
   }
 }
 .btn-primary {
-  background-color: #21364E; /* Change this to your desired color */
-  border-color: #21364E; /* Change this to match the background color if you want a solid border */
-  color: #EBE6D9; /* Change this to the text color you want */
+  background-color: #21364e; /* Change this to your desired color */
+  border-color: #21364e; /* Change this to match the background color if you want a solid border */
+  color: #ebe6d9; /* Change this to the text color you want */
 }
 
 .btn-primary:hover {
-  background-color: #EE3724; /* Change this to your desired hover color */
-  border-color: #EE3724; /* Change this to match the background color if you want a solid border */
-  color: #EBE6D9; /* Change this to the text color you want */
+  background-color: #ee3724; /* Change this to your desired hover color */
+  border-color: #ee3724; /* Change this to match the background color if you want a solid border */
+  color: #ebe6d9; /* Change this to the text color you want */
 }
 .entry-title a {
   text-decoration: none;
+}
+
+/* custom */
+.social-icon {
+  width: 32px;
+  height: 32px;
 }
