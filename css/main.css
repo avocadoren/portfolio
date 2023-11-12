@@ -1,0 +1,369 @@
+html, body {
+  overflow-x: hidden;
+}
+body {
+  background-color: #EBE6D9; 
+	color: #21364E;
+}
+/**
+ * Enable smooth scrolling on the whole document
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/**
+ * Add .section to every anchored element for scroll margin
+ */
+.section {
+  scroll-margin-top: 2rem;
+}
+
+/* Header */
+.site-title {
+  min-width: 10em;
+  float:left;
+}
+
+@media (min-width: 48em) {
+  .site-title {
+    float: left;
+  }
+}
+
+.nav-link {
+  font-weight: 700;
+ font-size: 1rem;
+  color: rgba(33, 54, 78, 0.8) !important;
+}
+
+.social-nav .nav-link {
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.active .nav-link {
+  color: rgba(238, 55, 36, 0.6) !important;
+}
+
+/* Hero (intro) section */
+.intro-title {
+  font-weight: 600;
+}
+
+#makeithiger{
+	margin-top:-15px;
+	color:rgba(33,54,78,0.8);
+	font-style: italic;
+}
+
+@-webkit-keyframes animateWave {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes animateWave {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.wave-bg {
+  display: block;
+  height: 220px;
+  width: 100%;
+  min-width: 600px;
+  transform-origin: top;
+  -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+          animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-image: url("../images/wave-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+img.avatar {
+  border-radius: 30px;
+}
+.col-md-6{
+	margin-top: 70px;
+}
+
+
+/* portfolio computer */
+#smallcomputer {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  max-width: 100%; /* Set a max-width to prevent the container from becoming too small */
+  margin: 0; /* Set margin to 0 to eliminate extra margin */
+  padding: 0; /* Set padding to 0 to eliminate extra padding */
+
+}
+
+.figure {
+    position: relative;
+  }
+
+.figure img.Sirv.image-main,
+.figure img.Sirv.image-hover {
+  width: 1500px; /* Set the desired width for the SVG images */
+  height: 1500px; /* Set the desired height for the SVG images */
+  object-fit: contain;
+}
+
+ .figure img.Sirv.image-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+	 max-width: 100%;
+  }
+  .figure:hover img.Sirv.image-hover {
+    opacity: 1;
+	  max-width: 100%;
+
+  }
+
+/* Styles for the modified grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Adjust the gap between grid items */
+  position: absolute;
+  top: 200%; /* Place the grid vertically at 50% from the top */
+  left: 50%; /* Place the grid horizontally at 50% from the left */
+  transform: translate(-50%, -50%); /* Center the grid */
+  z-index: 2; /* Set a higher z-index to make the grid appear above #smallcomputer */
+  width: 90%; /* Set a relative width to ensure the grid doesn't overflow the screen */
+  max-width: 600px; /* Set a maximum width for better responsiveness */
+}
+
+
+.grid-item {
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100px; /* Set the width of the icons */
+  height: 100px; /* Set the height of the icons */
+  object-fit: cover;
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+
+
+
+/* Masonary grid for portfolio */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* Grid Item */
+.grid-sizer,
+.grid-item {
+  width: 100%;
+}
+
+.grid-item {
+  padding-bottom: 12px;
+}
+
+@media (min-width: 48em) {
+  .grid-sizer,
+  .grid-item {
+    width: 25%;
+  }
+  .grid-item {
+    float: left;
+    padding: 6px;
+  }
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Portfolio */
+.portolio-section .container {
+  padding: 0;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+}
+
+.portfolio-item figcaption {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  background: rgba(33, 54, 78, 0.75);
+  transition: transform 0.35s;
+  transform: translate3d(0, 100%, 0);
+}
+
+.portfolio-item figcaption h4 {
+  color: #EBE6D9;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.portfolio-item figcaption p {
+  color: #EBE6D9;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.portfolio-item:hover figcaption {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Portolio Caption */
+#bp_container .bp-xc {
+  background: #EE3724 !important;
+}
+
+#bp_caption a {
+  text-decoration: none;
+}
+
+/* Footer section */
+footer a:not(.nav-link) {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+	background-color: #EBE6D9;
+}
+
+/* Scroll Top */
+#scrolltop {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+	color:#21364E;
+}
+
+#scrolltop .btn {
+  padding: 3px 11px;
+  border-radius: 50%;
+}
+
+/* Additional utility styles */
+.container-narrow {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-uppercase {
+  letter-spacing: 0.05em;
+}
+
+.hover-effect {
+  transition: transform .18s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: translateY(-2px);
+}
+
+.marker {
+  position: relative;
+  display: inline;
+  width: auto;
+}
+
+.marker-center {
+  padding-right: 0;
+}
+
+.marker:after {
+  content: "";
+  width: 125px;
+  height: 30px;
+  position: absolute;
+  bottom: -25px;
+  right: -15px;
+  background-image: url("../images/marker.svg");
+  background-repeat: no-repeat;
+}
+
+.marker-center:after {
+  bottom: -30px;
+  left: 50%;
+  margin-left: -60px;
+}
+
+@media (max-width: 575.98px) {
+  .marker {
+    padding-right: 0;
+  }
+  .marker:after {
+    bottom: -30px;
+    left: 50%;
+    margin-left: -60px;
+  }
+}
+.btn-primary {
+  background-color: #21364E; /* Change this to your desired color */
+  border-color: #21364E; /* Change this to match the background color if you want a solid border */
+  color: #EBE6D9; /* Change this to the text color you want */
+}
+
+.btn-primary:hover {
+  background-color: #EE3724; /* Change this to your desired hover color */
+  border-color: #EE3724; /* Change this to match the background color if you want a solid border */
+  color: #EBE6D9; /* Change this to the text color you want */
+}
+.entry-title a {
+  text-decoration: none;
+}
