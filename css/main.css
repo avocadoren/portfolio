@@ -108,107 +108,6 @@ img.avatar {
   margin-top: 70px;
 }
 
-/* portfolio computer */
-#smallcomputer {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  max-width: 100%; /* Set a max-width to prevent the container from becoming too small */
-  margin: 0; /* Set margin to 0 to eliminate extra margin */
-  padding: 0; /* Set padding to 0 to eliminate extra padding */
-}
-
-.figure {
-  position: relative;
-}
-
-.figure img.Sirv.image-main,
-.figure img.Sirv.image-hover {
-  width: 1500px; /* Set the desired width for the SVG images */
-  height: 1500px; /* Set the desired height for the SVG images */
-  object-fit: contain;
-}
-
-.figure img.Sirv.image-hover {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.2s;
-  max-width: 100%;
-}
-.figure:hover img.Sirv.image-hover {
-  opacity: 1;
-  max-width: 100%;
-}
-
-/* Styles for the modified grid */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px; /* Adjust the gap between grid items */
-  position: absolute;
-  top: 200%; /* Place the grid vertically at 50% from the top */
-  left: 50%; /* Place the grid horizontally at 50% from the left */
-  transform: translate(-50%, -50%); /* Center the grid */
-  z-index: 2; /* Set a higher z-index to make the grid appear above #smallcomputer */
-  width: 90%; /* Set a relative width to ensure the grid doesn't overflow the screen */
-  max-width: 600px; /* Set a maximum width for better responsiveness */
-}
-
-.grid-item {
-  text-align: center;
-}
-
-.grid-item img {
-  width: 100px; /* Set the width of the icons */
-  height: 100px; /* Set the height of the icons */
-  object-fit: cover;
-}
-
-.grid-item a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-}
-
-/* Masonary grid for portfolio */
-.grid:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* Grid Item */
-.grid-sizer,
-.grid-item {
-  width: 100%;
-}
-
-.grid-item {
-  padding-bottom: 12px;
-}
-
-@media (min-width: 48em) {
-  .grid-sizer,
-  .grid-item {
-    width: 25%;
-  }
-  .grid-item {
-    float: left;
-    padding: 6px;
-  }
-}
-
-.grid-item img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-}
-
 /* Portfolio */
 .portolio-section .container {
   padding: 0;
@@ -221,44 +120,184 @@ img.avatar {
   margin: 0;
 }
 
-.portfolio-item figcaption {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px;
-  background: rgba(33, 54, 78, 0.75);
-  transition: transform 0.35s;
-  transform: translate3d(0, 100%, 0);
-}
-
-.portfolio-item figcaption h4 {
-  color: #ebe6d9;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 3px;
-}
-
-.portfolio-item figcaption p {
-  color: #ebe6d9;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-.portfolio-item:hover figcaption {
-  transform: translate3d(0, 0, 0);
-}
-
-/* Portolio Caption */
-#bp_container .bp-xc {
-  background: #ee3724 !important;
-}
-
-#bp_caption a {
+a.btn {
+  background: #21364e;
+  border-radius: 4px;
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+  display: inline-block;
+  padding: 6px 30px 8px;
+  position: relative;
   text-decoration: none;
+  transition: all 0.1s 0s ease-out;
+}
+
+.no-touch a.btn:hover {
+  background: lighten(#21364e, 2.5);
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out;
+}
+
+.no-touch a.btn:active,
+a.btn:active {
+  background: darken(#21364e, 2.5);
+  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+  transform: translate3d(0, 1px, 0);
+  transition: all 0.025s 0s ease-out;
+}
+
+div.cards {
+  margin: 80px auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+div.card {
+  background: white;
+  display: inline-block;
+  margin: 8px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+
+  img {
+    max-width: 300px;
+  }
+
+  .card__image-holder {
+    background: rgba(0, 0, 0, 0.1);
+    height: 0;
+    padding-bottom: 75%;
+  }
+
+  div.card-title {
+    background: white;
+    padding: 6px 15px 10px;
+    position: relative;
+    z-index: 0;
+
+    a.toggle-info {
+      border-radius: 32px;
+      height: 32px;
+      padding: 0;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      width: 32px;
+
+      span {
+        background: white;
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 16px;
+        transition: all 0.15s 0s ease-out;
+        width: 12px;
+      }
+
+      span.left {
+        right: 14px;
+        transform: rotate(45deg);
+      }
+      span.right {
+        left: 14px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      margin: 0;
+      padding: 0;
+
+      small {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+      }
+    }
+  }
+
+  div.card-description {
+    padding: 0 15px 10px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  div.card-actions {
+    box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+    padding: 10px 15px 20px;
+    text-align: center;
+  }
+
+  div.card-flap {
+    background: darken(white, 15);
+    position: absolute;
+    width: 100%;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+  }
+  div.flap1 {
+    transition: all 0.3s 0.3s ease-out;
+    z-index: -1;
+  }
+  div.flap2 {
+    transition: all 0.3s 0s ease-out;
+    z-index: -2;
+  }
+}
+
+div.cards.showing {
+  div.card {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: scale(0.88);
+  }
+}
+
+.no-touch div.cards.showing {
+  div.card:hover {
+    opacity: 0.94;
+    transform: scale(0.92);
+  }
+}
+
+div.card.show {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+
+  div.card-title {
+    a.toggle-info {
+      background: salmon !important;
+      span {
+        top: 15px;
+      }
+      span.left {
+        right: 10px;
+      }
+      span.right {
+        left: 10px;
+      }
+    }
+  }
+  div.card-flap {
+    background: white;
+    transform: rotateX(0deg);
+  }
+  div.flap1 {
+    transition: all 0.3s 0s ease-out;
+  }
+  div.flap2 {
+    transition: all 0.3s 0.2s ease-out;
+  }
 }
 
 /* Footer section */
